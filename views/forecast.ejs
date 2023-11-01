@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="/ejs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+    <div class="heading"><span class="h1"><%=lists[0].cityname%> </span> <span class="h2">Weather </span><span class="h3"> Report</span></div>
+    <div class="mid">
+    <div class="mid-bar">Today Weather Report</div>
+    <div class="mid-bar">Today Weather Report</div>
+    <div class="mid-data">
+      <div class="flex-grid">
+        <div class="flex-child one"><img src="<%=lists[0].icon%>" class="mid-img"/>
+          <p class="inline-block"><%=lists[0].description%></p></div>
+    <div class="flex-child two">
+      <h3><%=lists[0].weekdays%></h3>
+      <h6 class="date"><%=dt%></h6>
+      <hr  width="200px" align="center" noshade/>
+      <h4> <%=lists[0].temp%> <sup>o</sup>C</h4>
+    </div>
+      </div>
+    </div>
+    <div class="rigth-data">
+      <div class="right-grid">
+        <div class="right-div">Temperature  <i class="fa-solid fa-temperature-low"></i></div>
+        <div class="right-div"> <%=lists[0].temp%> <sup>o</sup>C</b></div>
+        <div class="right-div">Humidity  <i class="fa-solid fa-droplet"></i></div>
+        <div class="right-div"> <%=lists[0].humidity%>%</b></div>
+        <div class="right-div">Pressure  <i class="fa-solid fa-tornado"></i></div>
+        <div class="right-div"> <%=lists[0].pressure%> hPa</b></div>
+        <div class="right-div">Wind Speed  <i class="fa-solid fa-wind"></i></div>
+        <div class="right-div"> <%=lists[0].windspeed%> m/s</b></div>
+      </div> 
+    </div>
+    </div>
+    <div class="bottom-grid">
+      <% for(var i=1;i<7;i++) {%>
+      <div class="bottom-bar">
+        <%=lists[i].weekdays%>
+      </div>
+      <%}%>
+      <% for(var i=1;i<7;i++) {%>
+      <div class="bottom-data">
+        <img class="bottom-img" src="<%=lists[i].icon%>"/>
+          <!-- <h3>Weather in <%=lists[i].cityname%></h3> -->
+          <!-- <h3><%=lists[i].dt%></h3> -->
+          <!-- <h3><%=lists[i].weekdays%></h3> -->
+          <p class="desc"s><%=lists[i].description%></p>
+          <p class="temp"><%=lists[i].temp%> <sup>o</sup>C</b></p>
+          <!-- <p> <%=lists[i].humidity%>%</b></p>
+          <p><%=lists[i].pressure%> hPa</b></p>
+          <p><%=lists[i].windspeed%> m/s</b></p> -->
+          <br/>
+        </div>
+      <%}%>
+    </div>
+ 
+</div>
+<!-- <script href="forecast2.js"></script> -->
+
+  <script src="https://kit.fontawesome.com/919e7dd8ee.js" crossorigin="anonymous"></script>
+  </body>
+  
+
+  </html>
